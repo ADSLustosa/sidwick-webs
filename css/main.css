@@ -1,62 +1,76 @@
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-
-
-@font-face {
-    font-family: "Proxima Nova Regular";
-    src: url("/Fonts/proxima-nova-regular.otf") format("opentype");
+  margin: 0;
+  padding: 0;
 }
 
 @font-face {
-    font-family: "Proxima Nova Bold";
-    src: url("/Fonts/proxima-nova-bold.otf") format("opentype");
+  font-family: "Proxima Nova Regular";
+  src: url("/Fonts/proxima-nova-regular.otf") format("opentype");
 }
 
 @font-face {
-    font-family: "Proxima Nova Extrabold";
-    src: url("/Fonts/proxima-nova-extrabold.otf") format("opentype");
+  font-family: "Proxima Nova Bold";
+  src: url("/Fonts/proxima-nova-bold.otf") format("opentype");
 }
 
 @font-face {
-    font-family: "Myriad Pro Regular";
-    src: url("/Fonts/MyriadPro-Regular.otf") format("opentype");
+  font-family: "Proxima Nova Extrabold";
+  src: url("/Fonts/proxima-nova-extrabold.otf") format("opentype");
 }
 
 @font-face {
-    font-family: "Playfair Display Regular";
-    src: url("/Fonts/PlayfairDisplay-Regular.ttf") format("truetype");
+  font-family: "Myriad Pro Regular";
+  src: url("/Fonts/MyriadPro-Regular.otf") format("opentype");
 }
 
 @font-face {
-    font-family: "Playfair Display Italic";
-    src: url("/Fonts/PlayfairDisplay-Italic.ttf") format("truetype");
+  font-family: "Playfair Display Regular";
+  src: url("/Fonts/PlayfairDisplay-Regular.ttf") format("truetype");
 }
 
+@font-face {
+  font-family: "Playfair Display Italic";
+  src: url("/Fonts/PlayfairDisplay-Italic.ttf") format("truetype");
+}
 
-.italico {
-    font-style: italic;
-    font-family: "Playfair Display Italic", serif;
+:root {
+  --primary: #157762;
+  --blue: rgb(0, 255, 255);
+  --white: rgb(255, 255, 255);
+  --white-low: rgb(220, 220, 220);
+  --gray: rgb(60, 60, 60);
+  --gray-line: rgb(145, 145, 145);
+  --black: rgb(0, 0, 0);
+  --black-mid: rgb(17, 17, 17);
+  --black-initial: rgb(15, 15, 15);
+  --black-end: rgb(30, 30, 30);
+  --light-black: rgb(0, 0, 0, 0.7);
+}
+
+/* Scrollbar*/
+::-webkit-scrollbar {
+  width: 7px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--primary);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: var(--white-low);
+}
+
+.font-style {
+  font-style: italic;
+  font-family: "Playfair Display Italic", serif;
 }
 
 .negrito {
-    font-weight: bold;
-}
-
-body {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: "Proxima Nova Regular", sans-serif;
+  font-weight: bold;
 }
 
 main {
-    padding-top: 100px;
-    padding-bottom: 160px;
-    max-width: 1200px;
-    margin: 0 auto;
-    background-color: #f9f9f9;
-    min-height: calc(100vh - 260px);
+  background-color: #f9f9f9;
+  min-height: calc(100vh - 260px);
 }

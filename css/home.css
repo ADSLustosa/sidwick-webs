@@ -1,306 +1,319 @@
 /* HOME 1 */
-#home {
-    scroll-margin-top: 120px;
-}
-
 
 .home-1 {
-    position: relative;
-    width: 100%;
-    max-width: 100%;
-    overflow: hidden;
-    height: 400px; 
+  position: relative;
+  height: 80vh;
+  overflow: hidden;
+  background: url("/images/img1.png") center/cover no-repeat;
 }
 
-.home-1 img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: flex;
-    top: 0;
-    left: 0;
-    filter: opacity(0.8);
+.overlay-text {
+  position: relative; /* sobe acima do ::before */
+  z-index: 1;
+  max-width: 500px;
+  color: #157762;
+  padding: 0 30px;
+  transform: translateY(-50%);
+  top: 40vh;
 }
 
-.home-1 .overlay-text {
-    position: absolute;
-    top: 50%;
-    left: 30px;
-    transform: translateY(-50%);
-    z-index: 2;
-    color: #157762;
-    max-width: 500px;
-}
 .home-1 .overlay-text h1 {
-    font-weight: normal;
-    font-size: 55px;
-    font-style: normal;
-    font-family: "Proxima Nova Regular", sans-serif;
-    max-width: 400px;
-    margin-bottom: 20px;
-    
-}
-.home-1 .overlay-text p {
-    font-size: 20px;
-    margin-bottom: 20px;
-    font-style: normal;
+  font-family: "Proxima Nova", sans-serif;
+  font-size: 55px;
+  margin-bottom: 20px;
+  font-weight: normal;
 }
 
+.overlay-text p {
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+/* responsividade */
+@media (max-width: 700px) {
+  /* remove a imagem e força fundo branco */
+  .home-1 {
+    background-image: none;
+    background-color: #ffffff;
+    /* se quiser que a altura seja automática para encaixar o texto */
+    height: auto;
+    padding: 40px 20px;
+  }
+
+  /* centraliza todo o texto e ajusta o container */
+  .overlay-text {
+    position: relative; /* mantém no fluxo */
+    margin-top: 3;
+    top: 50px; /* zera qualquer top anterior */
+    transform: none; /* zera o translateY */
+    max-width: 100%;
+    margin: 0 auto;
+    text-align: center; /* texto centralizado */
+    padding: 0; /* já tem padding no pai se quiser */
+  }
+
+  /* opcional: ajustar fontes se precisar */
+  .home-1 .overlay-text h2 {
+    font-size: 28px;
+  }
+  .home-1 .overlay-text p {
+    font-size: 16px;
+    line-height: 1.4;
+  }
+}
 
 /* HOME 2 */
 .home-2 {
-    position: relative;
-    width: 100%;
-    height: 70vh;
-    background: url("/images/img2.png") no-repeat right center/contain;
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    overflow: hidden;
+  position: relative;
+  width: 100%;
+  height: 70vh;
+  background: url("/images/img2.png") no-repeat right center/contain;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  overflow: hidden;
 }
 
 .home-2 .overlay-text {
-    position: relative;
-    z-index: 2;
-    color: #157762;
-    max-width: 500px;
-    padding-left: 30px;
+  position: relative;
+  z-index: 2;
+  color: #157762;
+  max-width: 500px;
+  padding-left: 30px;
 }
 
 .home-2 .overlay-text h2 {
-    font-weight: normal;
-    font-size: 40px;
-    font-style: normal;
-    font-family: "Proxima Nova Regular", sans-serif;
-    max-width: 350px;
-    margin-bottom: 20px;
+  font-weight: normal;
+  font-size: 40px;
+  font-style: normal;
+  font-family: "Proxima Nova Regular", sans-serif;
+  max-width: 350px;
+  margin-bottom: 20px;
 }
 
 .home-2 .overlay-text p {
-    font-size: 20px;
-    margin-bottom: 20px;
-    font-style: normal;
-    font-family: "Proxima Nova Regular", sans-serif;
-    font-weight: normal;
-    max-width: 435px;
+  font-size: 20px;
+  margin-bottom: 20px;
+  font-style: normal;
+  font-family: "Proxima Nova Regular", sans-serif;
+  font-weight: normal;
+  max-width: 435px;
 }
-
 
 /* HOME 3*/
 
 .home-3 {
-    position: relative;
-    width: 100%;
-    height: auto;
-    overflow: hidden;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #fff;
-    padding: 60px 40px;
-    box-sizing: border-box;
-    font-family: "Proxima Nova Regular", sans-serif;
+  position: relative;
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  padding: 60px 40px;
+  box-sizing: border-box;
+  font-family: "Proxima Nova Regular", sans-serif;
 }
 
 .home-3 .background-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(rgba(74, 155, 136, 0.75), rgba(23, 71, 61, 0.75)),
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(rgba(74, 155, 136, 0.75), rgba(23, 71, 61, 0.75)),
     url("/sidwick-website/images/img3.png") no-repeat center center / cover;
-    z-index: 1;
+  z-index: 1;
 }
 
 .home-3 .overlay-text {
-    position: relative;
-    z-index: 2;
-    width: 100%;
-    max-width: 1400px;
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  max-width: 1400px;
 }
 
 .home-3 .text-content {
-    margin: 0 auto;
-    text-align: left;
+  margin: 0 auto;
+  text-align: left;
 }
 
 .home-3 .text-content h2 {
-    font-family: "Proxima Nova Regular";
-    font-weight: normal;
-    color: white;
-    font-size: 41px;
-    margin-bottom: 20px;
+  font-family: "Proxima Nova Regular";
+  font-weight: normal;
+  color: white;
+  font-size: 41px;
+  margin-bottom: 20px;
 }
 
 .home-3 .text-content p {
-    font-size: 21px;
-    margin-bottom: 40px;
-    max-width: 750px;
+  font-size: 21px;
+  margin-bottom: 40px;
+  max-width: 750px;
 }
 
 .circle-container {
-    display: flex;
-    justify-content: center; 
-    flex-wrap: wrap;
-    gap: 30px;
-    margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin-top: 20px;
 }
 
 .circle1,
 .circle2,
 .circle3 {
-    width: 180px;
-    height: 180px;
-    background-color: #157762;
-    color: #fff;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    padding: 20px;
-    font-size: 1.5em;
-    line-height: 1.4;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  width: 180px;
+  height: 180px;
+  background-color: #157762;
+  color: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 20px;
+  font-size: 1.5em;
+  line-height: 1.4;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
 
 .circle4 {
-    width: 180px;
-    height: 180px;
-    background-color: white;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    color: #15754e;
-    padding: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-    font-size: 0.8em;
-    box-sizing: border-box;
-    overflow: hidden;
-    flex-direction: column;
-    word-break: break-word;
+  width: 180px;
+  height: 180px;
+  background-color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #15754e;
+  padding: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  font-size: 0.8em;
+  box-sizing: border-box;
+  overflow: hidden;
+  flex-direction: column;
+  word-break: break-word;
 }
 
 .circle4 > p {
-    margin-top: 30px;
-    margin-left: 20px;
-    padding: 0;
-    color: #15754e;
-    font-family: "Proxima Nova Regular", sans-serif;
-    font-size: 1em !important;
-    padding: 20px;
-    line-height: 1.7;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: left;
+  margin-top: 30px;
+  margin-left: 20px;
+  padding: 0;
+  color: #15754e;
+  font-family: "Proxima Nova Regular", sans-serif;
+  font-size: 1em !important;
+  padding: 20px;
+  line-height: 1.7;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: left;
 }
 
-  /* HOME 4 */
+/* HOME 4 */
 
 .home-4 {
-    padding: 40px 20px;
-    background-color: #CBD8CF;
+  padding: 40px 20px;
+  background-color: #cbd8cf;
 }
 
 .home-4 h2 {
-    text-align: left;
-    margin-left: 30px;
-    font-size: 2em;
-    color: #157762;
-    font-family: "Proxima Nova Regular", sans-serif;
-    font-weight: normal;
+  text-align: left;
+  margin-left: 30px;
+  font-size: 2em;
+  color: #157762;
+  font-family: "Proxima Nova Regular", sans-serif;
+  font-weight: normal;
 }
 
-
 .card {
-    background-color: #f1f1f1;
-    border-radius: 8px;
-    width: 340px;
-    text-align: center;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
-    margin: 0 10px;
-    overflow: hidden;
+  background-color: #f1f1f1;
+  border-radius: 8px;
+  width: 340px;
+  text-align: center;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  margin: 0 10px;
+  overflow: hidden;
 }
 
 .card:hover {
-    transform: translateY(-5px);
+  transform: translateY(-5px);
 }
 
 .card img {
-    width: 100%;
-    height: auto;
-    display: block;
-    border-top-left-radius: 12px;      
-    border-top-right-radius: 12px;
-    margin: 0; 
+  width: 100%;
+  height: auto;
+  display: block;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+  margin: 0;
 }
 
 .card h3 {
-    margin-left: 8px;
-    padding: 7px;
-    text-align: left;
-    font-size: 1.8em;
-    font-weight: normal;
-    font-family: "Proxima Nova Regular", sans-serif;
-    color: #157762;
+  margin-left: 8px;
+  padding: 7px;
+  text-align: left;
+  font-size: 1.8em;
+  font-weight: normal;
+  font-family: "Proxima Nova Regular", sans-serif;
+  color: #157762;
 }
 
 .card p {
-    margin-left: 15px;
-    margin-bottom: 20px;
-    text-align: left;
-    font-size: 1.1em;
-    font-weight: normal;
-    font-family: "Proxima Nova Regular", sans-serif;
-    color: #157762;
+  margin-left: 15px;
+  margin-bottom: 20px;
+  text-align: left;
+  font-size: 1.1em;
+  font-weight: normal;
+  font-family: "Proxima Nova Regular", sans-serif;
+  color: #157762;
 }
 
 .carousel-item > .row {
-    justify-content: center;
+  justify-content: center;
 }
 .carousel-item {
-    transition: transform 1.5s ease-in-out;
+  transition: transform 1.5s ease-in-out;
 }
 
-  /* HOME 5 */
+/* HOME 5 */
 .home-5 {
-    padding: 25px;
-    background-color: white;
+  padding: 25px;
+  background-color: white;
 }
 
 .home-5 h2 {
-    text-align: left;
-    margin-left: 30px;
-    font-size: 2em;
-    color: #157762;
-    font-family: "Proxima Nova Regular", sans-serif;
-    font-weight: normal;
+  text-align: left;
+  margin-left: 30px;
+  font-size: 2em;
+  color: #157762;
+  font-family: "Proxima Nova Regular", sans-serif;
+  font-weight: normal;
 }
 
 .gallery {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 30px;
 }
 
 .gallery img {
-    width: 140px;
-    height: auto;
-    object-fit: contain;
-    filter: grayscale(20%);
-    transition: transform 0.3s ease, filter 0.3s ease;
+  width: 140px;
+  height: auto;
+  object-fit: contain;
+  filter: grayscale(20%);
+  transition: transform 0.3s ease, filter 0.3s ease;
 }
 
 .gallery img:hover {
-    transform: scale(1.05);
-    filter: grayscale(0%);
-}  
+  transform: scale(1.05);
+  filter: grayscale(0%);
+}

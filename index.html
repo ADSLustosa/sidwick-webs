@@ -4,7 +4,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="description" content="Sidwick - Integrated solutions for health services">
+    <meta name="keywords" content="Sidwick, Health Services, Solutions, Pharmaceuticals, Healthcare">
+    <meta name="author" content="Sidwick Team">
+    <meta name="theme-color" content="#157762;">
+
+    <!-- Nome e imagem da guia -->
     <title>Sidwick</title>
+    <link rel="icon" href="images/favicon.png" type="image/png">
+
+
+    <!-- Animação -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Preloads -->
+
+    <!-- CSS -->
     <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/home.css">
@@ -12,15 +28,18 @@
     <link rel="stylesheet" href="css/solutions.css">
     <link rel="stylesheet" href="css/certifications.css">
     <link rel="stylesheet" href="css/footer.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    
-
 </head>
 
 <body>
-    <header>
-        <nav>
-            <ul>
+    <header id="nav">
+        <div class="image-logo-nav">
+            <a href="index.html" target="_self">
+                <img src="/images/logo.png" alt="logo Sidwick" title="Logo Sidwick" />
+            </a>
+        </div>
+        <button id="buttonMobile">&#9776;</button>
+        <nav id="menu">
+            <ul class="navbar-list">
                 <li class="active"><a href="#home" target="_self">Home</a></li>
                 <li><a href="#about-us" target="_self">About us</a></li>
                 <li><a href="#solutions" target="_self">Solutions</a></li>
@@ -32,64 +51,30 @@
                 <div class="language-divider"></div>
                 <button class="language-button">ESP</button>
             </div>
-            
         </nav>
-    
-        <script>
-            const menuItems = document.querySelectorAll("nav ul li");
-            const languageButtons = document.querySelectorAll(".language-button");
-        
-            
-            window.addEventListener("load", () => {
-                const homeSection = document.getElementById("home");
-                if (homeSection) {
-                    homeSection.scrollIntoView({ behavior: "instant" });
-                }
-            });
-        
-            
-            menuItems.forEach(item => {
-                item.addEventListener("click", () => {
-                    menuItems.forEach(li => li.classList.remove("active"));
-                    item.classList.add("active");
-                });
-            });
-        
-            
-            languageButtons.forEach(button => {
-                button.addEventListener("click", () => {
-                    languageButtons.forEach(btn => btn.classList.remove("selected"));
-                    button.classList.add("selected");
-                });
-            });
-        </script>
-        
-        
-        
     </header>
-
 
     <main>
         <section class="home" id="home">
             <!-- Seção 1 -->
             <section class="home-1">
-                <img src="images/img1.png" alt="Integrated solutions for health services">
                 <div class="overlay-text">
-                    <h1>Integrated <span class="italico">solutions</span> for health services</h1>
+                    <h1>Integrated <span class="font-style">solutions</span> for health services</h1>
                     <p>We are an Argentina-based pharmaceutical company with over 20 years of experience, committed to
                         adding value to the regional and global healthcare market.</p>
                 </div>
             </section>
 
             <!-- Seção 2 -->
-
             <section class="home-2">
                 <div class="overlay-text">
-                    <h2>Shaping <span class="italico">the future</span> of healthcare</h2>
+                    <h2>Shaping <span class="font-style">the future</span> of healthcare</h2>
                     <p>From concept to completion, we specialize in assisting both local and international companies
-                        <span class="negrito">seeking to launch their services to the LATAM market</span>, focusing on identifying the best business
+                        <span class="negrito">seeking to launch their services to the LATAM market</span>, focusing on
+                        identifying the best business
                         opportunities in both public and private sectors, providing customized top-quality solutions to
-                        fulfill our client’s needs.</p>
+                        fulfill our client’s needs.
+                    </p>
                 </div>
             </section>
 
@@ -100,7 +85,7 @@
 
                 <div class="overlay-text">
                     <div class="text-content">
-                        <h2>+20 years of experience <span class="italico">and counting</span></h2>
+                        <h2>+20 years of experience <span class="font-style">and counting</span></h2>
                         <p>Supplying generic products to the HHS and unions in several programs with funding and under
                             World Bank and BID regulations.</p>
 
@@ -125,114 +110,118 @@
                 <h2>Sidwick in numbers</h2>
 
                 <div id="sidwickCarousel" class="carousel slide" data-bs-interval="6000" data-bs-pause="true">
-                <div class="carousel-inner">
+                    <div class="carousel-inner">
 
-                    <!-- Slide 1 -->
-                    <div class="carousel-item active">
-                    <div class="row justify-content-center">
-                        <div class="col-md-4 d-flex justify-content-center">
-                            <div class="card">
-                            <img src="images/img4.png" alt="Service 1">
-                            <h3>38 bids won</h3>
-                            <p>8 Consecutive years of 80% exclusive supplies to MoH Argentina under World Bank Finance.</p>
+                        <!-- Slide 1 -->
+                        <div class="carousel-item active">
+                            <div class="row justify-content-center">
+                                <div class="col-md-4 d-flex justify-content-center">
+                                    <div class="card">
+                                        <img src="images/img4.png" alt="Service 1">
+                                        <h3>38 bids won</h3>
+                                        <p>8 Consecutive years of 80% exclusive supplies to MoH Argentina under World
+                                            Bank Finance.</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 d-flex justify-content-center">
+                                    <div class="card">
+                                        <img src="images/img5.png" alt="Service 2">
+                                        <h3>99%</h3>
+                                        <p>Institutional and HMOs collection efficiency.</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 d-flex justify-content-center">
+                                    <div class="card">
+                                        <img src="images/img6.png" alt="Service 3">
+                                        <h3>80%</h3>
+                                        <p>Involvement in the Reproductive Health Program for providing oral and
+                                            injectable contraceptives.</p>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
+
+                        <!-- Slide 2 -->
+                        <div class="carousel-item">
+                            <div class="row justify-content-center">
+                                <div class="col-md-4 d-flex justify-content-center">
+                                    <div class="card">
+                                        <img src="/sidwick-website/images/img4.png" alt="Service 4">
+                                        <h3>50 partners</h3>
+                                        <p>Global suppliers and distribution networks established.</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 d-flex justify-content-center">
+                                    <div class="card">
+                                        <img src="/sidwick-website/images/img-solutions-1.png" alt="Service 5">
+                                        <h3>12 countries</h3>
+                                        <p>International presence and successful partnerships across LATINA AMERICA.</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 d-flex justify-content-center">
+                                    <div class="card">
+                                        <img src="/sidwick-website/images/img-solutions-3.png" alt="Service 6">
+                                        <h3>24/7 Support</h3>
+                                        <p>Always available customer and institutional support services.</p>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        <div class="col-md-4 d-flex justify-content-center">
-                        <div class="card">
-                            <img src="images/img5.png" alt="Service 2">
-                            <h3>99%</h3>
-                            <p>Institutional and HMOs collection efficiency.</p>
+
+                        <!-- Slide 3 -->
+                        <div class="carousel-item">
+                            <div class="row justify-content-center">
+                                <div class="col-md-4 d-flex justify-content-center">
+                                    <div class="card">
+                                        <img src="/sidwick-website/images/img-solutions-2.png" alt="Service 7">
+                                        <h3>250+ products</h3>
+                                        <p>Diverse pharmaceutical and healthcare solutions portfolio.</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 d-flex justify-content-center">
+                                    <div class="card">
+                                        <img src="/sidwick-website/images/img1.png" alt="Service 8">
+                                        <h3>20 audits passed</h3>
+                                        <p>Compliance with WHO, MoH and ISO quality standards.</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 d-flex justify-content-center">
+                                    <div class="card">
+                                        <img src="/sidwick-website/images/img6.png" alt="Service 9">
+                                        <h3>45 team members</h3>
+                                        <p>Specialized professionals across departments and regions.</p>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
+
+                        <!-- Slide 4 -->
+                        <div class="carousel-item">
+                            <div class="row justify-content-center">
+                                <div class="col-md-4 d-flex justify-content-center">
+                                    <div class="card">
+                                        <img src="/sidwick-website/images/img2.png" alt="Service 10">
+                                        <h3>ISO Certified</h3>
+                                        <p>Operational excellence and certified quality systems in place.</p>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        <div class="col-md-4 d-flex justify-content-center">
-                        <div class="card">
-                            <img src="images/img6.png" alt="Service 3">
-                            <h3>80%</h3>
-                            <p>Involvement in the Reproductive Health Program for providing oral and injectable contraceptives.</p>
-                        </div>
-                        </div>
-                    </div>
+
                     </div>
 
-                    <!-- Slide 2 -->
-                    <div class="carousel-item">
-                    <div class="row justify-content-center">
-                        <div class="col-md-4 d-flex justify-content-center">
-                        <div class="card">
-                            <img src="/sidwick-website/images/img4.png" alt="Service 4">
-                            <h3>50 partners</h3>
-                            <p>Global suppliers and distribution networks established.</p>
-                        </div>
-                        </div>
-                        <div class="col-md-4 d-flex justify-content-center">
-                        <div class="card">
-                            <img src="/sidwick-website/images/img-solutions-1.png" alt="Service 5">
-                            <h3>12 countries</h3>
-                            <p>International presence and successful partnerships across LATINA AMERICA.</p>
-                        </div>
-                        </div>
-                        <div class="col-md-4 d-flex justify-content-center">
-                        <div class="card">
-                            <img src="/sidwick-website/images/img-solutions-3.png" alt="Service 6">
-                            <h3>24/7 Support</h3>
-                            <p>Always available customer and institutional support services.</p>
-                        </div>
-                        </div>
-                    </div>
-                    </div>
+                    <!-- Carousel controls -->
+                    <button class="carousel-control-prev" type="button" data-bs-target="#sidwickCarousel"
+                        data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
 
-                    <!-- Slide 3 -->
-                    <div class="carousel-item">
-                        <div class="row justify-content-center">
-                        <div class="col-md-4 d-flex justify-content-center">
-                        <div class="card">
-                            <img src="/sidwick-website/images/img-solutions-2.png" alt="Service 7">
-                            <h3>250+ products</h3>
-                            <p>Diverse pharmaceutical and healthcare solutions portfolio.</p>
-                        </div>
-                        </div>
-                        <div class="col-md-4 d-flex justify-content-center">
-                        <div class="card">
-                            <img src="/sidwick-website/images/img1.png" alt="Service 8">
-                            <h3>20 audits passed</h3>
-                            <p>Compliance with WHO, MoH and ISO quality standards.</p>
-                        </div>
-                        </div>
-                        <div class="col-md-4 d-flex justify-content-center">
-                        <div class="card">
-                            <img src="/sidwick-website/images/img6.png" alt="Service 9">
-                            <h3>45 team members</h3>
-                            <p>Specialized professionals across departments and regions.</p>
-                        </div>
-                        </div>
-                    </div>
-                    </div>
-
-                    <!-- Slide 4 -->
-                    <div class="carousel-item">
-                    <div class="row justify-content-center">
-                        <div class="col-md-4 d-flex justify-content-center">
-                        <div class="card">
-                            <img src="/sidwick-website/images/img2.png" alt="Service 10">
-                            <h3>ISO Certified</h3>
-                            <p>Operational excellence and certified quality systems in place.</p>
-                        </div>
-                        </div>
-                    </div>
-                    </div>
-
-                </div>
-                
-                <!-- Carousel controls -->
-                <button class="carousel-control-prev" type="button" data-bs-target="#sidwickCarousel" data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Previous</span>
-                </button>
-
-                <button class="carousel-control-next" type="button" data-bs-target="#sidwickCarousel" data-bs-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Next</span>
-                </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#sidwickCarousel"
+                        data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
                 </div>
 
 
@@ -242,7 +231,7 @@
 
             <!-- Seção 5 -->
             <section class="home-5">
-                <h2><span class="italico">Our</span> clients</h2>
+                <h2><span class="font-style">Our</span> clients</h2>
                 <div class="gallery">
                     <img src="images/logo-swiss-medical.png" alt="Swiss Medical">
                     <img src="images/logo-sancor-salud.webp" alt="Sancor Salud">
@@ -258,19 +247,21 @@
         <section class="about-us" id="about-us">
             <section class="about-us-first-container ">
                 <div class="about-us-header">
-                    <h2>About <span class="italico">us</span></h2>
-                    <p>At the heart of our operations, <span class="negrito">Credencial Payments, By Urbana</span> and <span class="negrito">PoGoMED S.A.</span>, work collaboratively to enhance Sidwick's
+                    <h2>About <span class="font-style">us</span></h2>
+                    <p>At the heart of our operations, <span class="negrito">Credencial Payments, By Urbana</span> and
+                        <span class="negrito">PoGoMED S.A.</span>, work collaboratively to enhance Sidwick's
                         transactional and financial procedures, connecting stakeholders in the healthcare sector through
-                        payment solutions and cross-border services tailored to the market's demands.</p>
+                        payment solutions and cross-border services tailored to the market's demands.
+                    </p>
                 </div>
                 <section class="about-us-first-section">
-                    
+
                     <h3 class="about-us-title">SIDWICK</h3>
 
-                    
+
                     <div class="about-us-divider"></div>
 
-                    
+
                     <div class="about-us-logos">
                         <img src="images/img-credencial.png" alt="Credencial Payments" />
                         <div class="about-us-vdivider"></div>
@@ -291,81 +282,89 @@
             <section class="about-us-second-container">
                 <div class="section-line"></div>
                 <div class="about-us-second-header">
-                    <h2><span class="italico">Mission</span> and Core Values</h2>
-                <div class="text-content">
-                    <p>
-                    <span class="negrito">Our mission:</span> where financial processing meets healthcare. <br>At Sidwick we combine
-                    <u>the best of both worlds:</u> 
-                    financial processing and healthcare, assisting institutions worldwide in entering the LATINA AMERICA and ASIAN markets by identifying prime business opportunities, improving facilities, streamlining operational processes and simplifying payment systems.</p>
-                    
-                    <p>All this securing milestones in successful and running businesses.</p>
-                    
-                    <p><span class="negrito">Our core values:</span></p>
+                    <h2><span class="font-style">Mission</span> and Core Values</h2>
+                    <div class="text-content">
+                        <p>
+                            <span class="negrito">Our mission:</span> where financial processing meets healthcare.
+                            <br>At Sidwick we combine
+                            <u>the best of both worlds:</u>
+                            financial processing and healthcare, assisting institutions worldwide in entering the LATINA
+                            AMERICA and ASIAN markets by identifying prime business opportunities, improving facilities,
+                            streamlining operational processes and simplifying payment systems.
+                        </p>
 
-                    <p>Compassion – Integrity – Expertise – Connections – Commitment – Excellence</p>
-                    
-                </div>
+                        <p>All this securing milestones in successful and running businesses.</p>
+
+                        <p><span class="negrito">Our core values:</span></p>
+
+                        <p>Compassion – Integrity – Expertise – Connections – Commitment – Excellence</p>
+
+                    </div>
                 </div>
             </section>
-            
-            
-            
+
+
+
 
             <section class="group">
                 <h2>Sidwick Group</h2>
                 <div class="perfil">
-            
-                '<div class="person">
-                    <img src="images/perfil1.png" alt="Carlos Gorleri">
-                    <h3>CARLOS GORLERI</h3>
-                    <p class="negrito">Director & Shareholder of Sidwick.</p>
-                    <p>President and CEO at Credencial Payments LatAm.</p>
-                    <p>35+ years LatAm leadership in processing prescriptions and payments.</p>
-                    <p>Global funding and regional social security process management.</p>
-                </div>
-            
-                <div class="person">
-                    <img src="images/perfil2.png" alt="Dherendra Oli">
-                    <h3>DHERENDRA OLI</h3>
-                    <p class="negrito">Director & Shareholder of Sidwick. Head of Business Development.</p>
-                    <p>Former AVP – Mylan/Viatris, Former Director – Jubilant Pharma, Former Business Head – ASIA MSN.</p>
-                    <p>25+ years of cross continent business leadership – LatAm & Asia.</p>
-                    <p>US/EU global & regional funding, NGOs, UNFDA, world bank and social security processes expert.</p>
-                </div>
-            
-                <div class="person">
-                    <img src="images/perfil3.png" alt="Carlos Vázquez">
-                    <h3>CARLOS VÁZQUEZ</h3>
-                    <p class="negrito">Director & Shareholder of Sidwick.</p>
-                    <p>President of ByUrbana – Argentina/México.</p>
-                    <p>35+ years of international business expertise.</p>
-                    <p>LatAm Government relations and regional tie-ups.</p>
-                    <p>Management of prescriptions and payment processing for large pharmacy chain groups in LatAm.</p>
-                </div>
-        
+
+                    '<div class="person">
+                        <img src="images/perfil1.png" alt="Carlos Gorleri">
+                        <h3>CARLOS GORLERI</h3>
+                        <p class="negrito">Director & Shareholder of Sidwick.</p>
+                        <p>President and CEO at Credencial Payments LatAm.</p>
+                        <p>35+ years LatAm leadership in processing prescriptions and payments.</p>
+                        <p>Global funding and regional social security process management.</p>
+                    </div>
+
+                    <div class="person">
+                        <img src="images/perfil2.png" alt="Dherendra Oli">
+                        <h3>DHERENDRA OLI</h3>
+                        <p class="negrito">Director & Shareholder of Sidwick. Head of Business Development.</p>
+                        <p>Former AVP – Mylan/Viatris, Former Director – Jubilant Pharma, Former Business Head – ASIA
+                            MSN.</p>
+                        <p>25+ years of cross continent business leadership – LatAm & Asia.</p>
+                        <p>US/EU global & regional funding, NGOs, UNFDA, world bank and social security processes
+                            expert.</p>
+                    </div>
+
+                    <div class="person">
+                        <img src="images/perfil3.png" alt="Carlos Vázquez">
+                        <h3>CARLOS VÁZQUEZ</h3>
+                        <p class="negrito">Director & Shareholder of Sidwick.</p>
+                        <p>President of ByUrbana – Argentina/México.</p>
+                        <p>35+ years of international business expertise.</p>
+                        <p>LatAm Government relations and regional tie-ups.</p>
+                        <p>Management of prescriptions and payment processing for large pharmacy chain groups in LatAm.
+                        </p>
+                    </div>
+
                 </div>
             </section>
-            
+
 
             <section class="our-track-record">
                 <h2>Our track record</h2>
-            
+
                 <div class="stats">
                     <div class="stat-box">
                         <img src="images/sticky-contract.png" alt="Bids Icon" class="stat-icon" />
                         <span>38 bids won</span>
                     </div>
-                
+
                     <div class="stat-box">
                         <img src="images/sticky-group.png" alt="Clients Icon" class="stat-icon" />
                         <span>+20M clients</span>
                     </div>
                 </div>
-            
+
                 <ul class="track-items">
                     <li>
                         <img src="images/sticky-check.png" alt="check icon" class="check-icon">
-                        <span class="negrito">8 consecutive years</span>of 80% exclusive supplies to MoH Argentina under World Bank Finance.
+                        <span class="negrito">8 consecutive years</span>of 80% exclusive supplies to MoH Argentina under
+                        World Bank Finance.
                     </li>
                     <li>
                         <img src="images/sticky-check.png" alt="check icon" class="check-icon">
@@ -373,7 +372,8 @@
                     </li>
                     <li>
                         <img src="images/sticky-check.png" alt="check icon" class="check-icon">
-                        <span class="negrito">80%</span> Involvement in the Reproductive Health Program for providing oral and injectable contraceptives.
+                        <span class="negrito">80%</span> Involvement in the Reproductive Health Program for providing
+                        oral and injectable contraceptives.
                     </li>
                     <li>
                         <img src="images/sticky-check.png" alt="check icon" class="check-icon">
@@ -381,19 +381,20 @@
                     </li>
                     <li>
                         <img src="images/sticky-check.png" alt="check icon" class="check-icon">
-                        <span class="negrito">18%</span> Involvement in the procurement process of the Remediar Program for the supply of generic medicines.
+                        <span class="negrito">18%</span> Involvement in the procurement process of the Remediar Program
+                        for the supply of generic medicines.
                     </li>
-                    </ul>
+                </ul>
             </section>
 
             <hr>
         </section>
 
-        
+
 
         <section class="solutions" id="solutions">
 
-            <h2><span class="italico">Custom</span>  Solutions</h2>
+            <h2><span class="font-style">Custom</span> Solutions</h2>
 
             <div class="market">
                 <img src="images/img-solutions-1.png" alt="market">
@@ -439,12 +440,13 @@
                     <div class="box">Volume buyers and White labelling for pharmacy chains</div>
                 </div>
             </div>
-        
+
             <div class="together-box">
                 <span>Together wherever you go</span>
-                <p>We operate in México, Guatemala, El Salvador, Honduras, Nicaragua, Costa Rica, Panamá, Colombia, Bolivia, Paraguay, Uruguay and Argentina.</p>
+                <p>We operate in México, Guatemala, El Salvador, Honduras, Nicaragua, Costa Rica, Panamá, Colombia,
+                    Bolivia, Paraguay, Uruguay and Argentina.</p>
             </div>
-        
+
             <h2>Market Segments in Argentina</h2>
             <div class="MSA">
                 <div class="boxes-container">
@@ -456,16 +458,17 @@
                     <div class="box">Chronic treatments</div>
                 </div>
             </div>
-        
+
             <div class="types">
                 <p><span>TYPES OF TENDERS</span></p>
                 <p><span>Local</span> (Federal – Provincial)</p>
-                <p><span>International with finance from multilateral organisms </span> (BID, Corporación Financiera Internacional, OMS)</p>
+                <p><span>International with finance from multilateral organisms </span> (BID, Corporación Financiera
+                    Internacional, OMS)</p>
             </div>
-            
-        
+
+
         </section>
-        
+
 
 
     </main>
@@ -509,13 +512,13 @@
         <span class="visually-hidden">Next</span>
     </button>
 
-    
+
     <script>
         const carouselElement = document.querySelector('#sidwickCarousel');
         const carousel = new bootstrap.Carousel(carouselElement, {
-        interval: 6000,
-        pause: true
-    });
+            interval: 6000,
+            pause: true
+        });
 
         const prevBtn = carouselElement.querySelector('.carousel-control-prev');
         const nextBtn = carouselElement.querySelector('.carousel-control-next');
@@ -523,19 +526,23 @@
         let prevInterval, nextInterval;
 
         prevBtn.addEventListener('mouseenter', () => {
-            carousel.prev(); 
+            carousel.prev();
             prevInterval = setInterval(() => carousel.prev(), 1500);
         });
-        
+
         prevBtn.addEventListener('mouseleave', () => clearInterval(prevInterval));
 
         nextBtn.addEventListener('mouseenter', () => {
-            carousel.next(); 
+            carousel.next();
             nextInterval = setInterval(() => carousel.next(), 1500);
-            });   
+        });
         nextBtn.addEventListener('mouseleave', () => clearInterval(nextInterval));
     </script>
 
 </body>
+
+
+<script src="/js/menumobile.js"></script>
+<script src="/js/navbar.js"></script>
 
 </html>
