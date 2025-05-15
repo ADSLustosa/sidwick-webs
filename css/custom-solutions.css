@@ -1,163 +1,81 @@
-.custom-solutions {
-    padding: 40px 10px;
-    background-color: white;
+/* Estilo base */
+.solutions {
+padding: 40px 20px;
+background-color: white;
+box-sizing: border-box;
+max-width: 1200px;
+margin: 0 auto;
 }
 
-.custom-solutions h2 {
-    text-align: left;
-    margin-left: 30px;
-    font-size: 2em;
-    color: #157762;
-    font-family: "Proxima Nova Regular", sans-serif;
-    font-weight: normal;
+.solutions h2 {
+text-align: left;
+margin-left: 10px;
+font-size: 2em;
+color: #157762;
+font-family: "Proxima Nova Regular", sans-serif;
+font-weight: normal;
 }
 
-.custom-solutions .market,
-.custom-solutions .prescription,
-.custom-solutions .infrastructure {
-    display: flex;
-    align-items: flex-start;
-    margin: 40px 0;
-    gap: 30px;
+.solution-item {
+display: flex;
+flex-direction: row;
+align-items: flex-start;
+gap: 30px;
+margin: 40px 0;
 }
 
-.custom-solutions img {
-    width: 300px;
-    height: auto;
-    flex-shrink: 0;
-    margin-left: 30px;
-    border-radius: 6px;
+.solution-item img {
+width: 100%;
+max-width: 350px;
+height: auto;
+border-radius: 6px;
+object-fit: cover;
 }
 
-.custom-solutions .text-content {
-    display: flex;
+.text-content {
+flex: 1;
+display: flex;
+flex-direction: column;
+justify-content: flex-start;
+}
+
+.text-content h3 {
+font-family: "Proxima Nova Extrabold", sans-serif;
+color: #157762;
+font-size: 1em;
+text-transform: uppercase;
+margin: 0;
+}
+
+.text-content p {
+font-family: "Proxima Nova Regular", sans-serif;
+color: #157762;
+font-size: 0.95em;
+line-height: 1.6;
+margin-top: 10px;
+word-wrap: break-word;
+}
+
+/* Responsividade para telas menores que 580px */
+@media (max-width: 580px) {
+.solution-item {
     flex-direction: column;
-    justify-content: flex-start;
-}
-
-.custom-solutions .text-content h3 {
-    font-family: "Proxima Nova Extrabold", sans-serif;
-    font-weight: normal;
-    color: #157762;
-    font-size: 1em;
-    text-transform: uppercase;
-    margin: 0;
-}
-
-.custom-solutions .text-content p {
-    font-family: "Proxima Nova Regular", sans-serif;
-    font-weight: normal;
-    color: #157762;
-    font-size: 0.95em;
-    line-height: 1.6;
-    margin-top: 10px;
-    max-width: 440px;
-}
-
-  /* CERTIFICATIONS */
-
-.certifications {
-    padding: 40px 20px;
-    background-color: #157762;
-}
-
-/* Título principal das seções */
-.certifications h2 {
-    background-color: #f2c9cf;
-    color: white;
-    padding: 10px 20px;
-    border-radius: 5px;
-    text-align: left;
-
-    margin: 30px auto;
-    font-size: 2.0rem;
-    font-family: "Proxima Nova Extrabold", sans-serif;
-    font-weight: normal;
-    max-width: 500px;
-    
-    line-height: 1;
-}
-
-/* Estilização para a MSW e MSA */
-.certifications .MSW,
-.certifications .MSA {
-    padding: 20px;
-    display: flex;
-    justify-content: center;
-}
-
-.certifications .boxes-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-    max-width: 1000px;
-}
-
-/* Estilo das caixas */
-.certifications .box {
-    background-color: white;
-    color: #006b5f;
-    padding: 15px 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
+    align-items: center;
     text-align: center;
-    width: 280px;
-    font-size: 1em;
-    font-family: "Proxima Nova", sans-serif;
 }
 
-/* Caixa com fundo de imagem */
-.together-box {
-    background-image: url("./images/img-custom-solutions-4.png");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center center;
-    background-blend-mode: overlay;
-    background-color: rgba(1, 71, 56, 0.75); 
-    
-    border-radius: 15px;
-    padding: 40px 20px;
-    margin: 40px auto;
-    max-width: 900px;
+.solution-item img {
+    max-width: 90%;
+    margin-bottom: 20px;
+}
+
+.text-content {
+    align-items: center;
+    padding: 0 10px;
+}
+
+.text-content h3,
+.text-content p {
     text-align: center;
-    position: relative;
 }
-
-.together-box .title,
-.together-box .text {
-    display: block;
-    background-color: #f2c9cf;
-    color: #006b5f;
-    padding: 10px 15px;
-    margin: 10px auto;
-    border-radius: 4px;
-    font-weight: bold;
-    max-width: 95%;
-}
-
-/* Bloco de tipos de concorrência */
-.types {
-    padding: 30px 20px;
-    color: #f2c9cf;
-}
-
-.types h3 {
-    color: #f2c9cf;
-    font-family: "Proxima Nova Extrabold", sans-serif;
-    font-size: 1.2em;
-    margin-bottom: 10px;
-    text-transform: uppercase;
-}
-
-.types p {
-    color: #f2c9cf;
-    font-size: 1em;
-    margin: 5px 0;
-}
-
-.certifications .types mark {
-    background-color: #f7d4d4;
-    color: #157762;
-    padding: 0 2px;
 }

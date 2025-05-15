@@ -1,162 +1,184 @@
-.about-us h2 {
-  font-family: "Proxima Nova Regular", sans-serif;
-  font-size: 35px;
-  color: #157762; 
+/* ========================
+   VARIÁVEIS GLOBAIS
+======================== */
+:root {
+  --color-primary: #157762;
+  --color-white: #ffffff;
+  --highlight-bg: #f7d4d4;
+
+  --font-regular: "Proxima Nova Regular", sans-serif;
+  --font-bold: "Proxima Nova Bold", sans-serif;
+  --font-extra-bold: "Proxima Nova Extrabold", sans-serif;
+
+  --fs-title: 2.375rem;   /* 38px */
+  --fs-h2: 2.1875rem;     /* 35px */
+  --fs-h2-tablet: 2rem;
+  --fs-h2-mobile: 1.5rem;
+
+  --fs-p: 1.25rem;        /* 20px */
+  --fs-p-tablet: 1.125rem;
+  --fs-p-mobile: 0.875rem;
+
+  --fs-name: 1.375rem;    /* 22px */
+  --fs-desc: 1rem;
+  --fs-list: 1rem;
+
+  --radius: 1.25rem;
+  --radius-large: 1.5rem;
+
+  --shadow-base: 0 4px 8px rgba(0, 0, 0, 0.1);
+  --shadow-hover: 0 8px 20px rgba(0, 0, 0, 0.15);
+  --shadow-stat: 20px 20px 20px rgba(0, 0, 0, 0.3);
 }
 
-.about-us p
-{
-  font-family: "Proxima Nova Regular", sans-serif;
-  font-size: 20px;
-  color: #157762;
+/* ========================
+   TIPOGRAFIA GLOBAL
+======================== */
+h2, p {
+  font-family: var(--font-regular);
+  color: var(--color-primary);
+  margin: 0;
 }
 
-.about-us-header h2 {
+/* ========================
+   SEÇÃO: ABOUT US
+======================== */
+.about-us h2,
+.about-us-header h2,
+.about-us-second-header h2 {
+  font-size: var(--fs-h2);
+}
 
-  font-size: 35px;
+.about-us p,
+.about-us-header p,
+.about-us-second-container p {
+  font-size: var(--fs-p);
+  line-height: 1.6;
 }
 
 .about-us-header p {
-  font-family: "Proxima Nova Bold", sans-serif;
-  font-size: 20px;
   padding-top: 20px;
+}
+
+.about-us-second-container mark {
+  background-color: var(--highlight-bg);
+  color: var(--color-primary);
+  padding: 0 2px;
+}
+
+.section-line {
+  height: 1px;
+  background-color: var(--color-primary);
+  margin-bottom: 20px;
 }
 
 .about-us-first-section {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 40px;
+  padding: 2.5rem;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .about-us-title {
   font-size: 3.5rem;
-  font-family: "Proxima Nova Extrabold", sans-serif;
+  font-family: var(--font-extra-bold);
   font-weight: bold;
-  color: #157762; 
   line-height: 1;
 }
 
 .about-us-divider {
   width: 50%;
   height: 1px;
-  background-color: #157762;
-  margin-top: 5px;
-  margin-bottom: 15px;
+  background-color: var(--color-primary);
+  margin: 0.3125rem 0 0.9375rem;
 }
 
 .about-us-logos {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 20px;
+  margin-bottom: 1.25rem;
+  gap: 1.25rem;
+  width: 100%;
+  overflow: hidden;
+  flex-wrap: nowrap;
 }
 
 .about-us-logos img {
-  max-height: 60px;
-  width: 200px;
+  max-height: 3.75rem;
+  width: 100%;
+  max-width: 12.5rem;
+  transition: all 0.3s ease;
+  object-fit: contain;
 }
 
 .about-us-vdivider {
-  background-color: #157762;
+  background-color: var(--color-primary);
   width: 1px;
   height: 3.5rem;
   margin: 0 1.5rem;
+  display: inline-block;
+  flex-shrink: 0;
 }
 
-.section-line {
-  height: 1px;
-  background-color: #157762;
-}
-
-.about-us-second-container p {
-  font-family: "Proxima Nova Regular", sans-serif;
-  font-size: 20px;
-  color: #157762;
-  line-height: 1.6;
-  margin-bottom: 20px;
-}
-
-
-.about-us-second-container mark {
-  background-color: #f7d4d4;
-  color: #157762;
-  padding: 0 2px;
-}
-
-
-.about-us-second-header h2 {
-  font-family: "Proxima Nova Regular", sans-serif;
-  font-size: 35px;
-  color: #157762;
-}
-
-
-.section-line {
-  height: 1px;
-  background-color: #157762;
-  margin-bottom: 20px;
-}
-
+/* ========================
+   SEÇÃO: GRUPO / PERFIL
+======================== */
 .group {
-  padding: 20px 20px 40px; 
+  padding: 1.25rem 1.25rem 2.5rem;
   text-align: center;
-  background-color: #157762;
+  background-color: var(--color-primary);
   position: relative;
-  overflow: hidden; 
-  margin-top: 60px; 
-  border-radius: 20px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  margin-top: 3.75rem;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-base);
   animation: fadeSlideUp 0.8s ease forwards;
   opacity: 0;
   transform: translateY(30px);
   animation-delay: 0.2s;
-  
 }
 
 .group h2 {
-  font-family: "Proxima Nova Regular", sans-serif;
-  font-size: 38px;
-  color: white;
+  font-size: var(--fs-title);
+  color: var(--color-white);
   text-align: left;
-  margin-left: 40px;
-  margin-bottom: 80px; 
-  padding: 10px;
-}
-
-
-@keyframes fadeSlideUp {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  margin: 0 0 5rem 2.5rem;
+  padding: 0.625rem;
 }
 
 .perfil {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 30px;
-  margin-top: 80px;
-  padding: 0 20px;
+  gap: 1.875rem;
+  margin-top: 5rem;
+  padding: 0 1.25rem;
 }
 
 .person {
   position: relative;
-  background-color: #ffffff;
-  border-radius: 20px;
-  padding: 100px 30px 40px;
-  max-width: 400px; /* Aumentado para mais espaço */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: var(--color-white);
+  border-radius: var(--radius);
+  padding: 6.25rem 1.875rem 2.5rem;
+  max-width: 25rem;
+  box-shadow: var(--shadow-base);
+  animation: fadeSlideUp 0.8s ease forwards;
   opacity: 0;
   transform: translateY(30px);
-  animation: fadeSlideUp 0.8s ease forwards;
   overflow: visible;
   transition: all 0.3s ease;
+}
+
+.person:nth-child(1) { animation-delay: 0.2s; }
+.person:nth-child(2) { animation-delay: 0.4s; }
+.person:nth-child(3) { animation-delay: 0.6s; }
+
+.person:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-hover);
 }
 
 .person img {
@@ -169,87 +191,64 @@
   border-radius: 50%;
   object-fit: cover;
   aspect-ratio: 1 / 1;
-  border: 4px solid #ffffff;
+  border: 4px solid var(--color-white);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
-.person:nth-child(1) {
-  animation-delay: 0.2s;
-}
-.person:nth-child(2) {
-  animation-delay: 0.4s;
-}
-.person:nth-child(3) {
-  animation-delay: 0.6s;
-}
-
-.person:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-}
-
 .person h3 {
-  font-family: "Proxima Nova Bold", sans-serif;
-  color: #157762;
-  font-size: 22px; /* Aumentado */
-  margin-bottom: 12px;
+  font-family: var(--font-bold);
+  font-size: var(--fs-name);
+  margin-bottom: 0.75rem;
 }
 
 .person p {
-  font-family: "Proxima Nova Regular", sans-serif;
-  color: #157762;
-  font-size: 16px; /* Aumentado */
-  margin-bottom: 10px;
-  line-height: 1.6; /* Melhor legibilidade */
+  font-size: var(--fs-desc);
+  margin-bottom: 0.625rem;
+  line-height: 1.6;
 }
 
 .negrito {
   font-weight: bold;
 }
 
-
-
-/* OUR TRACK RECORD */
-
+/* ========================
+   SEÇÃO: OUR TRACK RECORD
+======================== */
 .our-track-record {
-  padding: 40px 20px;
+  padding: 2.5rem 1.25rem;
   text-align: center;
-  background: #ffffff;
+  background-color: var(--color-white);
 }
 
 .our-track-record h2 {
-  font-family: "Proxima Nova Regular", sans-serif;
-  font-size: 35px;
-  color: #157762;
-  margin-bottom: 20px;
+  font-family: var(--font-regular);
+  font-size: var(--fs-h2);
+  color: var(--color-primary);
+  margin: 0 0 1.25rem 2.5rem;
+  padding: 0.625rem;
   text-align: left;
-  margin-left: 40px;
-  padding: 10px;
 }
 
 .stats {
   display: flex;
-  justify-content: center;
-  gap: 30px;
   flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.875rem;
 }
 
 .stat-box {
   display: flex;
   align-items: center;
-  gap: 20px;
-  background-color: #ffffff;
-  padding: 40px 60px;
-  border-radius: 24px;
-
-  
-  box-shadow: 20px 20px 20px rgba(0, 0, 0, 0.295);
-
-  font-family: "Proxima Nova Regular", sans-serif;
-  font-size: 28px;
-  color: #157762;
-  min-width: 400px;
   justify-content: center;
+  gap: 1.25rem;
+  background-color: var(--color-white);
+  padding: 2.5rem 3.75rem;
+  border-radius: var(--radius-large);
+  box-shadow: var(--shadow-stat);
+  font-family: var(--font-regular);
+  font-size: 1.75rem;
+  color: var(--color-primary);
+  min-width: 25rem;
   transition: transform 0.2s ease;
 }
 
@@ -263,27 +262,174 @@
   object-fit: contain;
 }
 
-
-
 .track-items {
   list-style: none;
   padding-left: 0;
-  margin-top: 50px;
+  margin-top: 3.125rem;
 }
 
 .track-items li {
   display: flex;
   align-items: flex-start;
-  gap: 10px;
-  font-family: "Proxima Nova Regular";
-  font-size: 16px;
-  color: #157762;
-  margin-bottom: 14px;
+  gap: 0.625rem;
+  font-family: var(--font-regular);
+  font-size: var(--fs-list);
+  color: var(--color-primary);
+  margin-bottom: 0.875rem;
   line-height: 1.6;
 }
 
 .check-icon {
   width: 20px;
   height: auto;
-  margin-top: 4px;
+  margin-top: 0.25rem;
+}
+
+/* ========================
+   ANIMAÇÕES GLOBAIS
+======================== */
+@keyframes fadeSlideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ========================
+   RESPONSIVIDADE GLOBAL
+======================== */
+@media (max-width: 1200px) {
+  .about-us-logos img {
+    max-height: 3.125rem;
+    max-width: 11.25rem;
+    width: auto;
+  }
+
+  .about-us h2,
+  .about-us-header h2,
+  .about-us-second-header h2,
+  .our-track-record h2 {
+    font-size: var(--fs-h2-tablet);
+  }
+
+  .about-us p,
+  .about-us-header p,
+  .about-us-second-container p,
+  .track-items li {
+    font-size: var(--fs-p-tablet);
+  }
+}
+
+@media (min-width: 1201px) {
+  .perfil {
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-us-logos {
+    justify-content: center;
+  }
+
+  .about-us-logos img {
+    max-height: 2.8125rem;
+    width: 80%;
+    max-width: 10rem;
+  }
+
+  .about-us-vdivider {
+    height: 2.5rem;
+    margin: 1rem 0;
+  }
+
+  .group h2,
+  .our-track-record h2 {
+    font-size: 2rem;
+    margin-left: 1.5rem;
+  }
+
+  .person {
+    max-width: 90%;
+    padding: 5rem 1rem 2rem;
+  }
+
+  .person img {
+    width: 120px;
+    height: 120px;
+    top: -60px;
+  }
+
+  .stat-box {
+    min-width: 90%;
+    padding: 2rem 1.5rem;
+    font-size: 1.5rem;
+  }
+
+  .track-items li {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-us-logos img {
+    max-height: 2.1875rem;
+    width: 70%;
+    max-width: 8.75rem;
+  }
+
+  .about-us-vdivider {
+    height: 2rem;
+  }
+
+  .about-us h2,
+  .about-us-header h2,
+  .about-us-second-header h2,
+  .our-track-record h2 {
+    font-size: var(--fs-h2-mobile);
+    margin-left: 1rem;
+  }
+
+  .about-us p,
+  .about-us-header p,
+  .about-us-second-container p,
+  .track-items li {
+    font-size: var(--fs-p-mobile);
+  }
+
+  .person {
+    padding: 4.5rem 1rem 2rem;
+  }
+
+  .person img {
+    width: 100px;
+    height: 100px;
+    top: -50px;
+  }
+
+  .person h3 {
+    font-size: 1.125rem;
+  }
+
+  .person p {
+    font-size: 0.875rem;
+  }
+
+  .stat-box {
+    flex-direction: column;
+    text-align: center;
+    padding: 2rem;
+  }
+
+  .stat-icon {
+    margin-bottom: 1rem;
+  }
+
+  .track-items li {
+    font-size: 0.875rem;
+  }
 }
