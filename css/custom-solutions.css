@@ -109,7 +109,7 @@
 
 /* Caixa com fundo de imagem */
 .together-box {
-    background-image: url("/sidwick-website/images/img-custom-solutions-4.png");
+    background-image: url("./images/img-custom-solutions-4.png");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;

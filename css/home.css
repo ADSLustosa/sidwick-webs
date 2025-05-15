@@ -1,319 +1,329 @@
-/* HOME 1 */
+/* ========== RESET GLOBAL ========== */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 
+body {
+  font-family: "Proxima Nova", sans-serif;
+  line-height: 1.5;
+  color: #157762;
+}
+
+/* ========== UTILITÁRIOS ========== */
+.text-left {
+  text-align: left;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* ========== HOME 1 ========== */
 .home-1 {
   position: relative;
-  height: 80vh;
-  overflow: hidden;
-  background: url("/images/img1.png") center/cover no-repeat;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: url("../images/img1.png") center center / cover no-repeat;
+  padding: calc(80px + 2vh) 2vw 4vh; 
+  scroll-margin-top: 80px;
+  text-align: center;
 }
 
-.overlay-text {
-  position: relative; /* sobe acima do ::before */
-  z-index: 1;
-  max-width: 500px;
-  color: #157762;
-  padding: 0 30px;
-  transform: translateY(-50%);
-  top: 40vh;
+.home-1 .overlay-text {
+  max-width: 600px;
 }
 
-.home-1 .overlay-text h1 {
-  font-family: "Proxima Nova", sans-serif;
-  font-size: 55px;
-  margin-bottom: 20px;
-  font-weight: normal;
+.home-1 h1 {
+  font-size: clamp(2rem, 6vw, 3.5rem);
+  margin-bottom: 1.25rem;
 }
 
-.overlay-text p {
-  font-size: 20px;
-  margin-bottom: 20px;
+.home-1 p {
+  font-size: clamp(1rem, 2.5vw, 1.25rem);
 }
 
-/* responsividade */
-@media (max-width: 700px) {
-  /* remove a imagem e força fundo branco */
-  .home-1 {
-    background-image: none;
-    background-color: #ffffff;
-    /* se quiser que a altura seja automática para encaixar o texto */
-    height: auto;
-    padding: 40px 20px;
-  }
-
-  /* centraliza todo o texto e ajusta o container */
-  .overlay-text {
-    position: relative; /* mantém no fluxo */
-    margin-top: 3;
-    top: 50px; /* zera qualquer top anterior */
-    transform: none; /* zera o translateY */
-    max-width: 100%;
-    margin: 0 auto;
-    text-align: center; /* texto centralizado */
-    padding: 0; /* já tem padding no pai se quiser */
-  }
-
-  /* opcional: ajustar fontes se precisar */
-  .home-1 .overlay-text h2 {
-    font-size: 28px;
-  }
-  .home-1 .overlay-text p {
-    font-size: 16px;
-    line-height: 1.4;
-  }
-}
-
-/* HOME 2 */
+/* ========== HOME 2 ========== */
+/* ========== HOME 2 ========== */
 .home-2 {
   position: relative;
-  width: 100%;
-  height: 70vh;
-  background: url("/images/img2.png") no-repeat right center/contain;
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: flex-start;
-  overflow: hidden;
+  justify-content: center;
+  min-height: 100vh;
+  background: url("../images/img2.png") center center / cover no-repeat;
+  padding: calc(80px + 2vh) 2vw 4vh;
+  scroll-margin-top: 80px;
+  text-align: center;
 }
 
 .home-2 .overlay-text {
-  position: relative;
-  z-index: 2;
-  color: #157762;
-  max-width: 500px;
-  padding-left: 30px;
+  max-width: 600px;
 }
 
-.home-2 .overlay-text h2 {
-  font-weight: normal;
-  font-size: 40px;
-  font-style: normal;
-  font-family: "Proxima Nova Regular", sans-serif;
-  max-width: 350px;
-  margin-bottom: 20px;
+.home-2 h2 {
+  font-size: clamp(2rem, 6vw, 3.5rem);
+  margin-bottom: 1.25rem;
 }
 
-.home-2 .overlay-text p {
-  font-size: 20px;
-  margin-bottom: 20px;
-  font-style: normal;
-  font-family: "Proxima Nova Regular", sans-serif;
-  font-weight: normal;
-  max-width: 435px;
+.home-2 p {
+  font-size: clamp(1rem, 2.5vw, 1.25rem);
 }
 
-/* HOME 3*/
 
+/* ========== HOME 3 ========== */
 .home-3 {
   position: relative;
-  width: 100%;
-  height: auto;
-  overflow: hidden;
   display: flex;
-  align-items: center;
+  flex-direction: column;
   justify-content: center;
+  min-height: 70vh;
+  overflow: hidden;
   color: #fff;
-  padding: 60px 40px;
-  box-sizing: border-box;
-  font-family: "Proxima Nova Regular", sans-serif;
 }
 
 .home-3 .background-overlay {
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(rgba(74, 155, 136, 0.75), rgba(23, 71, 61, 0.75)),
-    url("/sidwick-website/images/img3.png") no-repeat center center / cover;
+  inset: 0;
+  background: linear-gradient(
+      rgba(74, 155, 136, 0.75),
+      rgba(23, 71, 61, 0.75)
+    ),
+    url("../images/img3.png") center center / cover no-repeat;
   z-index: 1;
 }
 
 .home-3 .overlay-text {
   position: relative;
   z-index: 2;
-  width: 100%;
-  max-width: 1400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem 1rem;
 }
 
 .home-3 .text-content {
-  margin: 0 auto;
-  text-align: left;
+  max-width: 600px;
+  text-align: center;
 }
 
-.home-3 .text-content h2 {
-  font-family: "Proxima Nova Regular";
-  font-weight: normal;
-  color: white;
-  font-size: 41px;
-  margin-bottom: 20px;
-}
-
-.home-3 .text-content p {
-  font-size: 21px;
-  margin-bottom: 40px;
-  max-width: 750px;
+.home-3 h2,
+.home-3 p {
+  padding: 0.5rem 0;
 }
 
 .circle-container {
   display: flex;
-  justify-content: center;
   flex-wrap: wrap;
-  gap: 30px;
-  margin-top: 20px;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-top: 2rem;
+  padding-bottom: 1rem;
+}
+
+.circle {
+  width: clamp(160px, 20vw, 180px);
+  height: clamp(160px, 20vw, 180px);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 1rem;
+  font-size: 1.05rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  flex-shrink: 0;
+  overflow-wrap: break-word;
+  word-break: break-word;
 }
 
 .circle1,
 .circle2,
 .circle3 {
-  width: 180px;
-  height: 180px;
   background-color: #157762;
   color: #fff;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  padding: 20px;
-  font-size: 1.5em;
-  line-height: 1.4;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
 
 .circle4 {
-  width: 180px;
-  height: 180px;
-  background-color: white;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
+  background-color: #ffffff;
   color: #15754e;
-  padding: 10px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-  font-size: 0.8em;
-  box-sizing: border-box;
-  overflow: hidden;
+  display: flex;
   flex-direction: column;
-  word-break: break-word;
+  justify-content: center;
+  align-items: center;
+  line-height: 1.4;
+  height: clamp(160px, 20vw, 180px);
+  max-height: 100%;
+  padding: 1rem;
+  font-size: 1rem;
+  text-align: center;
 }
 
 .circle4 > p {
-  margin-top: 30px;
-  margin-left: 20px;
+  margin: 0;
   padding: 0;
-  color: #15754e;
-  font-family: "Proxima Nova Regular", sans-serif;
-  font-size: 1em !important;
-  padding: 20px;
-  line-height: 1.7;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: left;
+  font-size: 0.95rem;
+  line-height: 1.35;
+  text-align: center;
+  overflow-wrap: break-word;
+  word-break: break-word;
+  max-width: 90%;
 }
 
-/* HOME 4 */
-
+/* ========== HOME 4 ========== */
 .home-4 {
   padding: 40px 20px;
   background-color: #cbd8cf;
 }
 
 .home-4 h2 {
-  text-align: left;
-  margin-left: 30px;
-  font-size: 2em;
-  color: #157762;
-  font-family: "Proxima Nova Regular", sans-serif;
-  font-weight: normal;
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
 }
 
 .card {
-  background-color: #f1f1f1;
+  background: #f1f1f1;
   border-radius: 8px;
-  width: 340px;
-  text-align: center;
+  width: 100%;
+  max-width: 340px;
+  margin: 0 auto;
+  text-align: left;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease;
-  margin: 0 10px;
   overflow: hidden;
-}
-
-.card:hover {
-  transform: translateY(-5px);
+  padding: 1rem;
+  font-family: "Proxima Nova Regular", sans-serif;
+  color: #157762;
 }
 
 .card img {
   width: 100%;
-  height: auto;
-  display: block;
-  border-top-left-radius: 12px;
-  border-top-right-radius: 12px;
-  margin: 0;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 1rem;
 }
 
+
 .card h3 {
-  margin-left: 8px;
-  padding: 7px;
-  text-align: left;
-  font-size: 1.8em;
-  font-weight: normal;
-  font-family: "Proxima Nova Regular", sans-serif;
-  color: #157762;
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
 }
 
 .card p {
-  margin-left: 15px;
-  margin-bottom: 20px;
-  text-align: left;
-  font-size: 1.1em;
-  font-weight: normal;
-  font-family: "Proxima Nova Regular", sans-serif;
-  color: #157762;
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
 }
 
-.carousel-item > .row {
-  justify-content: center;
-}
-.carousel-item {
-  transition: transform 1.5s ease-in-out;
-}
-
-/* HOME 5 */
+/* ========== HOME 5 ========== */
 .home-5 {
-  padding: 25px;
-  background-color: white;
+  background: white;
+  padding: 2rem 1rem;
 }
 
 .home-5 h2 {
-  text-align: left;
-  margin-left: 30px;
-  font-size: 2em;
-  color: #157762;
-  font-family: "Proxima Nova Regular", sans-serif;
-  font-weight: normal;
+  font-size: clamp(1.5rem, 3.5vw, 2.25rem);
+  margin-bottom: 1rem;
 }
 
 .gallery {
   display: flex;
-  justify-content: center;
-  align-items: center;
   flex-wrap: wrap;
-  gap: 30px;
+  justify-content: center;
+  gap: 1rem;
 }
 
 .gallery img {
-  width: 140px;
+  width: clamp(90px, 15vw, 140px);
   height: auto;
-  object-fit: contain;
-  filter: grayscale(20%);
-  transition: transform 0.3s ease, filter 0.3s ease;
 }
 
-.gallery img:hover {
-  transform: scale(1.05);
-  filter: grayscale(0%);
+/* ========== MEDIA QUERIES ========== */
+
+@media (max-width: 768px) {
+
+  .home-1 .highlight {
+    background-color: white;
+    color: #157762;
+    padding: 0 0.2em; 
+    display: inline; 
+    line-height: 1.5;
+    border-radius: 2px;
+    box-shadow: none;
+  }
+  
+  .home-1 {
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+  }
+
+  .home-2 .highlight {
+    background-color: white;
+    color: #157762;
+    display: inline;
+    padding: 0 0.2em;
+    box-shadow: 0 0 0 0.2em white;
+    border-radius: 2px;
+  }
+
+  .home-4 .carousel-item .row {
+    flex-direction: column !important;
+    align-items: center;
+    gap: 1.5rem;
+  }
+
+  .home-4 .card {
+    margin: 0 !important;
+    width: 100%;
+    max-width: 340px;
+  }
+}
+
+@media (min-width: 768px) {
+  .home-1,
+  .home-2 {
+    flex-direction: row;
+    justify-content: flex-start;
+    text-align: left;
+  }
+
+  .home-2 .overlay-text,
+  .home-1 .overlay-text {
+    padding-left: 2vw;
+    text-align: left;
+  }
+
+  .home-3 .overlay-text {
+    align-items: flex-start;
+  }
+
+  .home-3 .text-content {
+    text-align: left;
+  }
+
+  .home-4 .card {
+    margin: 0 10px;
+    margin-bottom: 1.5rem;
+  }
+}
+
+@media (min-width: 880px) {
+  .circle-container {
+    flex-wrap: nowrap;
+    justify-content: space-between;
+  }
 }
