@@ -1,56 +1,82 @@
+/* Estilo base */
 .solutions {
-    padding: 40px 10px;
+    padding: 40px 20px;
     background-color: white;
-}
-
-.solutions h2 {
+    box-sizing: border-box;
+    max-width: 1200px;
+    margin: 0 auto;
+    }
+    
+    .solutions h2 {
     text-align: left;
-    margin-left: 30px;
+    margin-left: 10px;
     font-size: 2em;
     color: #157762;
     font-family: "Proxima Nova Regular", sans-serif;
+    font-weight: normal;
+    }
     
-}
-
-.solutions .market,
-.solutions .prescription,
-.solutions .infrastructure {
+    .solution-item {
     display: flex;
+    flex-direction: row;
     align-items: flex-start;
-    margin: 40px 0;
     gap: 30px;
-}
-
-.solutions img {
-    width: 300px;
+    margin: 40px 0;
+    }
+    
+    .solution-item img {
+    width: 100%;
+    max-width: 350px;
     height: auto;
-    flex-shrink: 0;
-    margin-left: 30px;
     border-radius: 6px;
-}
-
-.solutions .text-content {
+    object-fit: cover;
+    }
+    
+    .text-content {
+    flex: 1;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-}
-
-.solutions .text-content h3 {
+    }
+    
+    .text-content h3 {
     font-family: "Proxima Nova Extrabold", sans-serif;
     color: #157762;
     font-size: 1em;
     text-transform: uppercase;
     margin: 0;
-}
-
-.solutions .text-content p {
+    }
+    
+    .text-content p {
     font-family: "Proxima Nova Regular", sans-serif;
     color: #157762;
     font-size: 0.95em;
     line-height: 1.6;
     margin-top: 10px;
-    max-width: 440px;
-}
-
-
-
+    word-wrap: break-word;
+    }
+    
+    /* Responsividade para telas menores que 580px */
+    @media (max-width: 580px) {
+    .solution-item {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    
+    .solution-item img {
+        max-width: 90%;
+        margin-bottom: 20px;
+    }
+    
+    .text-content {
+        align-items: center;
+        padding: 0 10px;
+    }
+    
+    .text-content h3,
+    .text-content p {
+        text-align: center;
+    }
+    }
+    
