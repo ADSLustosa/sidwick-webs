@@ -12,7 +12,7 @@
 
     <!-- Nome e imagem da guia -->
     <title>Sidwick</title>
-    <link rel="icon" href="images/favicon.png" type="image/png">
+    <link rel="icon" href="./images/favicon.png" type="image/png">
 
 
     <!-- Animação -->
@@ -34,7 +34,7 @@
     <header id="nav">
         <div class="image-logo-nav">
             <a href="index.html" target="_self">
-                <img src="../images/logo.png" alt="logo Sidwick" title="Logo Sidwick" />
+                <img src="./images/logo.png" alt="logo Sidwick" title="Logo Sidwick" />
             </a>
         </div>
         <nav id="menu">
@@ -47,15 +47,15 @@
                     <li><a href="#footer" target="_self">Contact</a></li>
                 </ul>
                 <div class="language-selector">
-                <button class="language-button selected">ENG</button>
-                <div class="language-divider"></div>
-                <button class="language-button">ESP</button>
+                    <button class="language-button selected" data-lang="en">ENG</button>
+                    <div class="language-divider"></div>
+                    <button class="language-button" data-lang="es">ESP</button>
                 </div>
             </div>
-            </nav>
-            <button id="buttonMobile">&#9776;</button>
-        </header>
-    
+        </nav>
+        <button id="buttonMobile">&#9776;</button>
+    </header>
+
 
 
     <main>
@@ -63,8 +63,10 @@
             <!-- Seção 1 -->
             <section class="home-1">
                 <div class="overlay-text">
-                    <h1 class="highlight">Integrated <span class="font-style">solutions</span> for health services</h1> <br>
-                    <p class="highlight">We are an Argentina-based pharmaceutical company with over 20 years of experience, committed to
+                    <h1 class="highlight">Integrated <span class="font-style">solutions</span> for health services</h1>
+                    <br>
+                    <p class="highlight">We are an Argentina-based pharmaceutical company with over 20 years of
+                        experience, committed to
                         adding value to the regional and global healthcare market.</p>
                 </div>
             </section>
@@ -72,9 +74,12 @@
             <!-- Seção 2 -->
             <section class="home-2">
                 <div class="overlay-text">
-                    
+
                     <h2 class="highlight">Shaping <span class="font-style">the future</span> of healthcare</h2> <br>
-                    <p class="highlight">From concept to completion, we specialize in assisting both local and international companies<span class="negrito">seeking to launch their services to the LATAM market</span>, focusing on identifying the best business opportunities in both public and private sectors, providing customized top-quality solutions to fulfill our client’s needs.
+                    <p class="highlight">From concept to completion, we specialize in assisting both local and
+                        international companies<span class="negrito">seeking to launch their services to the LATAM
+                            market</span>, focusing on identifying the best business opportunities in both public and
+                        private sectors, providing customized top-quality solutions to fulfill our client’s needs.
                     </p>
                 </div>
             </section>
@@ -108,17 +113,20 @@
             <!-- Seção 4 -->
             <!-- Carousel Wrapper -->
             <section class="home-4">
-                <h2>Sidwick in numbers</h2>
 
                 <div id="sidwickCarousel" class="carousel slide" data-bs-interval="6000" data-bs-pause="true">
+
+                    <h2>Sidwick in numbers</h2>
                     <div class="carousel-inner">
 
                         <!-- Slide 1 -->
                         <div class="carousel-item active">
+
                             <div class="row justify-content-center">
+
                                 <div class="col-md-4 d-flex justify-content-center">
                                     <div class="card">
-                                        <img src="images/img4.png" alt="Service 1">
+                                        <img src="./images/img4.png" alt="Service 1">
                                         <h3>38 bids won</h3>
                                         <p>8 Consecutive years of 80% exclusive supplies to MoH Argentina under World
                                             Bank Finance.</p>
@@ -126,14 +134,14 @@
                                 </div>
                                 <div class="col-md-4 d-flex justify-content-center">
                                     <div class="card">
-                                        <img src="images/img5.png" alt="Service 2">
+                                        <img src="./images/img5.png" alt="Service 2">
                                         <h3>99%</h3>
                                         <p>Institutional and HMOs collection efficiency.</p>
                                     </div>
                                 </div>
                                 <div class="col-md-4 d-flex justify-content-center">
                                     <div class="card">
-                                        <img src="images/img6.png" alt="Service 3">
+                                        <img src="./images/img6.png" alt="Service 3">
                                         <h3>80%</h3>
                                         <p>Involvement in the Reproductive Health Program for providing oral and
                                             injectable contraceptives.</p>
@@ -267,7 +275,7 @@
                         <img src="./images/img-credencial.png" alt="Credencial Payments" />
                         <div class="about-us-vdivider"></div>
                         <img src="./images/img-byurbana.png" alt="By Urbana" />
-                        <div class="./about-us-vdivider"></div>
+                        <div class="../about-us-vdivider"></div>
                         <img src="./images/img-pogomed.png" alt="Pogomed" />
                     </div>
 
@@ -532,7 +540,8 @@
 </body>
 
 
-<script src="/js/menumobile.js"></script>
-<script src="/js/navbar.js"></script>
+<script src="./js/menumobile.js"></script>
+<script src="./js/navbar.js"></script>
+<script src="./js/translate.js"></script>
 
 </html>

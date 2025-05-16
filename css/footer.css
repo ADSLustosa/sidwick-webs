@@ -1,72 +1,72 @@
 footer {
-    background-color: #3f3f3f;
-    color: #f0f0f0;
-    padding: 40px 20px 20px;
-    font-family: "Proxima Nova 300", sans-serif;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    z-index: 100;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  background-color: #3f3f3f;
+  color: #f0f0f0;
+  padding: 40px 20px 20px;
+  font-family: "Proxima Nova 300", sans-serif;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .footer-content {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 40px;
-    max-width: 1200px;
-    width: 100%;
-    padding: 0 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  max-width: 1200px;
+  width: 100%;
+  padding: 0 20px;
 }
 
 .footer-left {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
 
-.footer-info {
-    max-width: 400px;
-    line-height: 1.6;
-    text-align: left;
+.footer-info p {
+  max-width: 400px;
+  line-height: 1.6;
+  text-align: left;
+  color: #f0f0f0;
 }
 
 .footer-separator {
-    width: 1px;
-    height: 150px;
-    background-color: white;
-    margin-left: 20px; 
+  width: 1px;
+  height: 150px;
+  background-color: white;
+  margin-left: 20px;
 }
 
 .shortcuts {
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-    align-items: flex-start;
-    max-width: 300px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: flex-start;
+  max-width: 300px;
 }
 
 .shortcuts button {
-    background-color: transparent;
-    color: white;
-    cursor: pointer;
-    border: none;
-    transition: all 0.3s ease;
-    text-align: left;
-    transform-origin: left;
+  background-color: transparent;
+  color: white;
+  cursor: pointer;
+  border: none;
+  transition: all 0.3s ease;
+  text-align: left;
+  transform-origin: left;
 }
 
 .shortcuts button:hover {
-    transform: scale(1.3);
+  transform: scale(1.3);
 }
 
-
 .copyright {
-    text-align: center;
-    margin-top: 20px;
-    font-size: 0.85em;
-    color: #aaa;
-    width: 100%;
+  text-align: center;
+  margin-top: 20px;
+  font-size: 0.85em;
+  color: #aaa;
+  width: 100%;
 }

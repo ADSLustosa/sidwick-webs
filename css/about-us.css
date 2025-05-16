@@ -10,16 +10,16 @@
   --font-bold: "Proxima Nova Bold", sans-serif;
   --font-extra-bold: "Proxima Nova Extrabold", sans-serif;
 
-  --fs-title: 2.375rem;   
-  --fs-h2: 2.1875rem;     
+  --fs-title: 2.375rem; 
+  --fs-h2: 2.1875rem; 
   --fs-h2-tablet: 2rem;
   --fs-h2-mobile: 1.5rem;
 
-  --fs-p: 1.25rem;        
+  --fs-p: 1.25rem; 
   --fs-p-tablet: 1.125rem;
   --fs-p-mobile: 0.875rem;
 
-  --fs-name: 1.375rem;    
+  --fs-name: 1.375rem; 
   --fs-desc: 1rem;
   --fs-list: 1rem;
 
@@ -34,7 +34,8 @@
 /* ========================
   TIPOGRAFIA GLOBAL
 ======================== */
-h2, p {
+h2,
+p {
   font-family: var(--font-regular);
   color: var(--color-primary);
   margin: 0;
@@ -173,9 +174,15 @@ h2, p {
   transition: all 0.3s ease;
 }
 
-.person:nth-child(1) { animation-delay: 0.2s; }
-.person:nth-child(2) { animation-delay: 0.4s; }
-.person:nth-child(3) { animation-delay: 0.6s; }
+.person:nth-child(1) {
+  animation-delay: 0.2s;
+}
+.person:nth-child(2) {
+  animation-delay: 0.4s;
+}
+.person:nth-child(3) {
+  animation-delay: 0.6s;
+}
 
 .person:hover {
   transform: translateY(-5px);
