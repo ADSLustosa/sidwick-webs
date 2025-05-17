@@ -14,19 +14,6 @@ body {
 }
 
 /* ========== UTILITÁRIOS ========== */
-.text-left {
-  text-align: left;
-}
-
-.text-center {
-  text-align: center;
-}
-
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 1rem;
-}
 
 /* ========== HOME 1 ========== */
 .home-1 {
@@ -39,7 +26,6 @@ body {
   background: url("../images/img1.png") center center / cover no-repeat;
   padding: calc(80px + 2vh) 2vw 4vh;
   scroll-margin-top: 80px;
-  text-align: center;
 }
 
 .home-1 .overlay-text {
@@ -47,12 +33,20 @@ body {
 }
 
 .home-1 h1 {
-  font-size: clamp(2rem, 6vw, 3.5rem);
-  margin-bottom: 1.25rem;
+  /*font-size: clamp(2rem, 6vw, 3.5rem);*/
+  font-size: 5rem;
 }
 
 .home-1 p {
-  font-size: clamp(1rem, 2.5vw, 1.25rem);
+  font-size: 1.4rem;
+  /* font-size: clamp(1rem, 2.5vw, 1.25rem); */
+}
+
+.highlight h1 {
+  /* Remove margens padrão, caso haja */
+  margin: 0;
+  /* Ajuste o valor até ficar com a distância que você quer */
+  line-height: 1.2;
 }
 
 /* ========== HOME 2 ========== */
@@ -67,16 +61,38 @@ body {
   background: url("../images/img2.png") center center / cover no-repeat;
   padding: calc(80px + 2vh) 2vw 4vh;
   scroll-margin-top: 80px;
-  text-align: center;
 }
 
-.home-2 .overlay-text {
-  max-width: 600px;
+.overlay-text {
+  max-width: 750px;
+}
+
+.icons-intern {
+  display: flex;
+  align-items: center;
+  gap: 20px;
 }
 
 .home-2 h2 {
-  font-size: clamp(2rem, 6vw, 3.5rem);
-  margin-bottom: 1.25rem;
+  font-size: 3.5rem;
+  /* font-size: clamp(2rem, 6vw, 3.5rem); */
+}
+
+.icons-home-2 {
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-items: center;
+  gap: 20px;
+}
+
+.twb {
+  width: 200px;
+}
+
+.icons {
+  width: 150px;
 }
 
 .home-2 p {
@@ -90,7 +106,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  min-height: 70vh;
+  min-height: 90vh;
   overflow: hidden;
   color: #fff;
 }
@@ -98,9 +114,11 @@ body {
 .home-3 .background-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(rgba(74, 155, 136, 0.75), rgba(17, 73, 62, 0.75)),
-    url("../images/img3.png") center center / cover no-repeat;
+  background: url("../images/img3.png") center center / cover no-repeat;
   z-index: 1;
+  background-color: #0f6b59;
+  /* modo de mistura (tinta + foto) */
+  background-blend-mode: multiply;
 }
 
 .home-3 .overlay-text {
@@ -113,11 +131,10 @@ body {
 }
 
 .home-3 .text-content {
-  max-width: 600px;
   text-align: center;
 }
 
-.home-3 .text-content h2{
+.home-3 .text-content h2 {
   font-size: clamp(2.8rem, 2.5vw, 1.25rem);
   color: #fff;
 }
@@ -135,10 +152,13 @@ body {
 .circle-container {
   display: flex;
   flex-wrap: wrap;
+  flex-direction: row;
   justify-content: center;
   gap: 1.5rem;
-  margin-top: 2rem;
-  padding-bottom: 1rem;
+}
+
+.circle-container-gap {
+  margin-top: 50px;
 }
 
 .circle {
@@ -150,7 +170,7 @@ body {
   justify-content: center;
   text-align: center;
   padding: 1rem;
-  font-size: 0.8rem;
+  font-size: 2rem;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
   flex-shrink: 0;
   overflow-wrap: break-word;
@@ -194,17 +214,29 @@ body {
   max-height: 100%;
   overflow: hidden;
   display: -webkit-box;
-  -webkit-line-clamp: 9; 
+  -webkit-line-clamp: 9;
   -webkit-box-orient: vertical;
 }
 
 /* ========== HOME 4 ========== */
 .home-4 {
-  padding: 40px 20px;
   background-color: #cbd8cf;
+  
+  height: 600px; /* ajuste conforme necessário */
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.carousel-inner {
+  height: 100%;
+  display: flex;
+  align-items: center;
 }
 
 .home-4 h2 {
+  padding: 2vw 5vw;
   font-size: 2rem;
   margin-bottom: 1.5rem;
 }
@@ -222,6 +254,9 @@ body {
   padding: 1rem;
   font-family: "Proxima Nova Regular", sans-serif;
   color: #157762;
+  height: 20vw;
+  display: flex;
+  flex-direction: column;
 }
 
 .card img {
@@ -233,63 +268,96 @@ body {
 }
 
 .card h3 {
-  font-size: 1.8rem;
+  font-size: 2rem;
   margin-bottom: 0.5rem;
 }
 
+
 .card p {
-  font-size: 1.1rem;
+  font-size: 1.4rem;
   margin-bottom: 1rem;
+
+  /* Garante que o texto não expanda o card além do limite */
+  flex-grow: 1;
 }
+
+.carousel-control-prev,
+.carousel-control-next {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 10%; /* espaço clicável */
+  z-index: 2;
+  cursor: pointer;
+  background: transparent;
+  opacity: 0; /* invisível, mas ainda clicável */
+}
+
+.carousel-control-prev {
+  left: 0;
+}
+
+.carousel-control-next {
+  right: 0;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  display: none; /* ocultar o ícone */
+}
+
+
 
 /* ========== HOME 5 ========== */
 .home-5 {
   background: white;
-  padding: 2rem 1rem;
+  padding: 2vw 5vw;
 }
 
 .home-5 h2 {
-  font-size: clamp(1.5rem, 3.5vw, 2.25rem);
-  margin-bottom: 1rem;
+  font-size: 2.5rem
+
 }
 
 .gallery {
   display: flex;
   flex-wrap: wrap;
+  align-items: center;
   justify-content: center;
   gap: 1rem;
 }
 
 .gallery img {
-  width: clamp(90px, 15vw, 140px);
-  height: auto;
+  width: 200px;
+
 }
 
 /* ========== MEDIA QUERIES ========== */
 
 @media (max-width: 768px) {
-  
   .home-1 .highlight {
-    background-color: white;
     color: #157762;
-    padding: 0 0.2em; 
-    display: inline; 
+    display: inline;
     line-height: 1.5;
     border-radius: 2px;
     box-shadow: none;
   }
-  
+
   .home-1 {
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
   }
 
+  .home-2 {
+    background-image: none;
+    background-color: #ffffff;
+  }
+
   .home-2 .highlight {
     background-color: white;
     color: #157762;
     display: inline;
-    padding: 0 0.2em;
     box-shadow: 0 0 0 0.2em white;
     border-radius: 2px;
   }
@@ -305,8 +373,8 @@ body {
     width: 100%;
     max-width: 340px;
   }
-}
 
+}
 
 @media (min-width: 768px) {
   .home-1,
